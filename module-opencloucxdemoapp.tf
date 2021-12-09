@@ -1,6 +1,6 @@
 module "opencloudcxdemoapp" {
   # source = "../module-python-microservice"
-  source = "git::ssh://git@github.com/OpenCloudCX/module-opencloudcxdemoapp?ref=develop"
+  source = "git::ssh://git@github.com/OpenCloudCX/module-bootstrapdemoapp?ref=develop"
 
   github_hook_pw = var.github_hook_pw
 
