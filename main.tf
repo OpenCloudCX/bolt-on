@@ -33,7 +33,7 @@ provider "spinnaker" {
 }
 
 provider "sonarqube" {
-  host                     = "http://sonarqube.${var.dns_zone}"
+  host                     = "https://sonarqube.${var.dns_zone}"
   user                     = "admin"
   pass                     = var.sonarqube_pw
   tls_insecure_skip_verify = true
