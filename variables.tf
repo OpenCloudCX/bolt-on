@@ -33,3 +33,7 @@ variable "eks_token" {
 variable "cluster_ca_certificate" {
   type = string
 }
+
+variable "sonarqube_pw" {
+  type = string
+}
