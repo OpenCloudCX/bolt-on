@@ -8,6 +8,10 @@ terraform {
       source  = "tidal-engineering/spinnaker"
       version = "1.0.6"
     }
+    sonarqube = {
+      source  = "jdamata/sonarqube"
+      version = "0.0.11"
+    }
   }
 }
 
@@ -25,6 +29,11 @@ provider "jenkins" {
 
 provider "spinnaker" {
   server             = "http://${var.spinnaker_host}.${var.dns_zone}"
+  ignore_cert_errors = true
+}
+
+provider "sonarqube" {
+  server             = "http://sonarqube.${var.dns_zone}"
   ignore_cert_errors = true
 }
 
